@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="DPSCalculatorPreloader">
     <configurations>
-      <configuration name="DPSCalculatorPreloader" target-platform="Desktop" pure-as="true" main-class="DPSCalculator__Preloader__" output-file="DPSCalculatorPreloader.swf" output-folder="$MODULE_DIR$/out/production/DPSCalculatorPreloader">
+      <configuration name="DPSCalculatorPreloader" target-platform="Desktop" pure-as="true" main-class="DPSCalculator__Preloader__" output-file="DPSCalculatorPreloader.swf" output-folder="$MODULE_DIR$/out/production">
         <dependencies target-player="32.0">
           <sdk name="Adobe AIR SDK 50.2" />
         </dependencies>
