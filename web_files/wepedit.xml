@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WeaponEditor>
+	<Align	colY="18" spW="2"
+			nsX="6" nsY="2" nsOX="63" nsW="55" nsH="16" 
+			cbX="2" cbY="2" cbOX="25" cbS="0.80"
+			txOX1="4" txOX2="63"
+			cpX="6" cpY="2" cpOX="63" cpW="55" cpH="16"
+			bagX="150" bagY="0" bagS="2"
+			selX="2" selY="2" selS="2"
+			cobX="6" cobY="2" cobOX="85" cobW="77" cobH="16"
+			btnX="2" btnY="7" btnW="96" btnH="16" />
+	<saveUI type="btn" prop="btnSave" h="18" >Save as New Weapon</saveUI>
+	<!--<saveUI type="btn" prop="btnLoad" skip="99">Load</saveUI>-->
+	<saveUI type="btn" prop="btnSetXML" skip="99">Import XML</saveUI>
+	<saveUI type="btn" prop="btnGetXML" y="18" skip="99" addCol="18">Export XML</saveUI>
+	<UI type="header">Sprite, Title and Description</UI>
+		<UI type="selectIS" prop="ISSelect">Item Sprite</UI>
+		<UI type="tip" prop="tiTitle" x="6" y="4" w="132" h="16" skip="40" >Title</UI>
+		<UI type="tip" prop="tiDescr" x="6" y="25" w="132" h="16" skip="40" addCol="24">Description</UI>
+	<UI type="header">Projectile Aesthetics</UI>
+		<UI type="selectP" prop="PrSelect">Projectile</UI>
+		<UI type="num" prop="nsSize" max="500" min="0" skip="40" x="1" y="11" addCol="24">Size</UI>
+		<UI type="col" prop="cpParticle" >Particle Trail</UI>
+		<UI type="num" prop="nsPartLT" max="10000" min="0" nsW="7">Particle Lifetime</UI>
+		<!--<UI type="num">Rotation</UI>-->
+	<!--<UI type="header">Weapon Sprite</UI>
+		<UI type="select"></UI>-->
+	<UI type="header">Projectile Trajectory</UI>
+		<UI type="num" prop="nsSpeed" max="1000" min="0" step="0.5">Speed</UI>
+		<UI type="num" prop="nsLifetime" max="15000" min="0" step="1" nsW="7">Lifetime</UI>
+		<UI type="res" prop="txtRange">Range</UI>
+		<UI type="num" prop="nsAmp" max="10" min="0" step="0.01">Amplitude</UI>
+		<UI type="num" prop="nsFreq" max="10" min="0" step="0.01">Frequency</UI>
+		<UI type="chb" prop="cbWavy">Wavy</UI>
+		<UI type="chb" prop="cbParam">Parametric</UI>
+	<UI type="header">Firing</UI>
+		<UI type="num" prop="nsNumProj" max="360" min="1">Projectile Amount</UI>
+		<UI type="num" prop="nsArcGap" max="360" min="0">Arc Gap</UI>
+		<UI type="res" prop="txtTrueRange">True Range</UI>
+	<UI type="header">Balancing</UI>
+		<UI type="num" prop="nsRoF" max="500" min="1">% Rate Of Fire</UI>
+		<UI type="num" prop="nsMinDmg" max="5000" min="1" nsW="7">Minimum Damage</UI>
+		<UI type="num" prop="nsMaxDmg" max="5000" min="1" nsW="7">Maximum Damage</UI>
+		<UI type="res" prop="txtAvgDmg">Average Damage</UI>
+		<UI type="res" prop="txtDPS">Base DPS</UI>
+		<UI type="chb" prop="cbMulti">Multihit</UI>
+		<UI type="chb" prop="cbAP">Armor Piercing</UI>
+		<UI type="chb" prop="cbNoCover">Ignores Obstacles</UI>
+	<UI type="header">Stat Bonuses</UI>
+		<UI type="num" prop="nsStat2" max="500" min="0">ATT</UI>
+		<UI type="num" prop="nsStat3" max="500" min="0" skip="90">DEF</UI>
+		<UI type="num" prop="nsStat4" max="500" min="0">SPD</UI>
+		<UI type="num" prop="nsStat5" max="500" min="0" skip="90">DEX</UI>
+		<UI type="num" prop="nsStat6" max="500" min="0">VIT</UI>
+		<UI type="num" prop="nsStat7" max="500" min="0" skip="90">WIS</UI>
+		<UI type="num" prop="nsStat0" max="500" min="0">HP</UI>
+		<UI type="num" prop="nsStat1" max="500" min="0" skip="90">MP</UI>
+	<UI type="header">Miscellaneous</UI>
+		<UI type="cob" prop="coboxSlot">Slot Type</UI>
+		<UI type="num" prop="nsTier" max="16" min="-1" nsW="-7">Tier</UI>
+		<UI type="num" prop="nsBag" max="6" min="0" nsW="-7">Bag Type</UI>
+		<UI type="num" prop="nsFame" max="8" min="0" nsW="-7">% Fame Bonus</UI>
+		<UI type="num" prop="nsFeed" max="100000" min="0" nsW="7">Feed Power</UI>
+		<UI type="chb" prop="cbSB">Soulbound</UI>
+</WeaponEditor>
