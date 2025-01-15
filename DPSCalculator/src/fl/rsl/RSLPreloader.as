@@ -24,7 +24,7 @@ package fl.rsl
    {
       protected var mainTimeline:MovieClip;
       
-      protected var contentClassName:String;
+      protected var contentClass:Class;
       
       protected var loaderAnim:Loader;
       
@@ -112,11 +112,11 @@ package fl.rsl
          this._rslInfoList.push(param1);
       }
       
-      public function start(param1:Class = null, param2:String = null) : void
+      public function start(param1:Class = null, param2:Class = null) : void
       {
          var _loc3_:ByteArray = null;
          var _loc4_:LoaderContext = null;
-         this.contentClassName = param2;
+         this.contentClass = param2;
          try
          {
             if(this.mainTimeline != null && param1 != null)
@@ -133,7 +133,6 @@ package fl.rsl
          }
          else
          {
-            trace("hey")
             this.loaderAnim = new Loader();
             this.mainTimeline.addChild(this.loaderAnim);
             this.loaderAnim.contentLoaderInfo.addEventListener(Event.COMPLETE,this.loaderAnimLoaded,false,0,true);
@@ -151,7 +150,7 @@ package fl.rsl
       {
          var lc:LoaderContext;
          var targetParent:DisplayObjectContainer = null;
-         var contentClass:Class = Class(this.mainTimeline.loaderInfo.applicationDomain.getDefinition(this.contentClassName));
+         var contentClass:Class = this.contentClass;
          var contentBytes:ByteArray = ByteArray(new contentClass());
          this.mainTimeline.addChild(this.contentLoader);
          lc = new LoaderContext(false,this.mainTimeline.loaderInfo.applicationDomain);
@@ -347,7 +346,7 @@ package fl.rsl
       
       protected function completeCallback() : void
       {
-         if(this.mainTimeline == null || this.contentClassName == null)
+         if(this.mainTimeline == null || this.contentClass == null)
          {
             if(this.numRSLFailed > 0)
             {
@@ -360,7 +359,7 @@ package fl.rsl
          }
          else
          {
-            this.mainTimeline.play();
+            (this.mainTimeline as DPSCalculator__Preloader__).frame2();
          }
       }
       
