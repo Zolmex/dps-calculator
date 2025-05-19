@@ -3,17 +3,15 @@
   <component name="FlexBuildConfigurationManager" active="DPSCalculator">
     <configurations>
       <configuration name="DPSCalculator" target-platform="Desktop" pure-as="true" main-class="DPSCalculator" output-file="DPSCalculator.swf" output-folder="$MODULE_DIR$/bin-debug">
-        <dependencies>
+        <dependencies target-player="32.0">
           <sdk name="Adobe AIR SDK 50.2" />
         </dependencies>
         <compiler-options>
           <map>
             <entry key="compiler.define" value="CONFIG::debug&#9;false&#10;CONFIG::release&#9;true" />
-            <entry key="compiler.locale" value="en_US" />
           </map>
-          <option name="additionalOptions" value="-default-size 800 600  -default-frame-rate 60  -default-background-color #000000  -swf-version 15  -dump-config config.xml  -optimize=true  -use-direct-blit=true  -keep-as3-metadata+=Inject  -keep-as3-metadata+=Embed  -keep-as3-metadata+=PostConstruct  -keep-as3-metadata+=ArrayElementType" />
         </compiler-options>
-        <packaging-air-desktop package-file-name="WebMain">
+        <packaging-air-desktop package-file-name="DPSCalculator">
           <files-to-package>
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/game_data" path-in-package="game_data" />
           </files-to-package>
