@@ -25,7 +25,7 @@ package
    {
       public static const TESTING:Boolean = false;
       
-      public static const LOCAL:Boolean = false;
+      public static const LOCAL:Boolean = true;
       
       public static const ADDIONAL_CACHE_BUSTER:String = "";
       
@@ -36,6 +36,8 @@ package
       private var sPathDefault:String = "http://pfiffel.bplaced.net/dps/";
       
       private var sPathTesting:String = "http://pfiffel.bplaced.net/dps/secret_testing/";
+
+      private var localPath:String = "game_data/";
       
       private var m_aFilesXML:Vector.<String> = new Vector.<String>();
       
@@ -263,7 +265,7 @@ package
          }
          if(LOCAL)
          {
-            this.sPath = "";
+            this.sPath = this.localPath;
             this.sAdd = "";
          }
          addChild(this.main);
