@@ -9,5 +9,5 @@ This is an un-official continuation of [pfiffel](https://github.com/pfiffel)'s R
 
 Credits:
 - Pfiffel (original creator)
-- Link (decompiled and built working source <3)
+- [Link](https://github.com/NotTheLegend) (decompiled and built working source <3)
 - Zolmex
